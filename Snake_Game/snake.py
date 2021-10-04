@@ -20,6 +20,22 @@ class Snake:
             prev_y = self.snake_body[part - 1].ycor()
             # snake_body[part].penup()
             self.snake_body[part].goto(prev_x, prev_y)
-
         self.snake_body[0].forward(20)
-        self.snake_body[0].right(90)
+
+    def up(self):
+        if self.snake_body[0].heading()!=270:
+         self.snake_body[0].setheading(90)
+
+
+    def down(self):
+        if self.snake_body[0].heading() != 90:
+         self.snake_body[0].setheading(270)
+
+    def right(self):
+        if self.snake_body[0].heading() != 180:
+         self.snake_body[0].setheading(0)
+
+    def left(self):
+        if self.snake_body[0].heading() != 0:
+         self.snake_body[0].setheading(180)
+
