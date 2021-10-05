@@ -28,4 +28,7 @@ while game_status:
     screen.update()
     time.sleep(0.1)
     snake.move()
+    if snake.snake_body[0].distance(food) < 15:
+        print("Caught that!")
+        food.new_food()
 screen.exitonclick()
