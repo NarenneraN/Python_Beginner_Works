@@ -7,12 +7,18 @@ class Snake:
 
     def create_snake(self):
         for position in positions:
-            new_div = Turtle("square")
-            new_div.penup()
-            new_div.goto(position)
-            # new_div.pendown()
-            new_div.color((204, 255, 0))
-            self.snake_body.append(new_div)
+            self.grow_snake(position)
+
+    def grow_snake(self,position):
+        new_div = Turtle("square")
+        new_div.penup()
+        new_div.goto(position)
+        # new_div.pendown()
+        new_div.color((204, 255, 0))
+        self.snake_body.append(new_div)
+
+    def add_new_part(self):
+        self.grow_snake(self.snake_body[-1].position())
 
     def move(self):
         for part in range(len(self.snake_body) - 1, 0, -1):

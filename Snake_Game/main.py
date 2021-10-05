@@ -30,8 +30,14 @@ while game_status:
     if snake.snake_body[0].distance(food) < 15:
         print("Caught that!")
         food.new_food()
+        snake.add_new_part()
         score.increase()
     if snake.snake_body[0].xcor()>340 or snake.snake_body[0].xcor()<-340 or snake.snake_body[0].ycor()<-340 or snake.snake_body[0].ycor()>340:
         game_status = False
         score.game_over()
+
+    for part in snake.snake_body:
+        if snake.snake_body[0].distance(part)<10 and snake.snake_body[0]!=part:
+            game_status=False
+            score.game_over()
 screen.exitonclick()
