@@ -7,7 +7,7 @@ from level import Level
 screen = Screen()
 screen.colormode(255)
 screen.tracer(0)
-screen.title("Naren's Snake Game Python")
+screen.title("Naren's Snake Game Python 😎")
 screen.setup(700,700)
 screen.bgcolor("black")
 
