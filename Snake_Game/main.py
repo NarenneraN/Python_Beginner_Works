@@ -34,4 +34,7 @@ while game_status:
         print("Caught that!")
         food.new_food()
         score.increase()
+    if snake.snake_body[0].xcor()>340 or snake.snake_body[0].xcor()<-340 or snake.snake_body[0].ycor()<-340 or snake.snake_body[0].ycor()>340:
+        game_status = False
+        score.game_over()
 screen.exitonclick()
