@@ -27,3 +27,5 @@ class Score(Turtle):
         self.write(f"Score :- {self.score}", font=('Courier', 24, 'italic'), align='center')
 
 
+
+
