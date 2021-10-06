@@ -41,6 +41,7 @@ class Snake:
         if self.snake_body[0].heading() != 180:
          self.snake_body[0].setheading(0)
 
+
     def left(self):
         if self.snake_body[0].heading() != 0:
          self.snake_body[0].setheading(180)
