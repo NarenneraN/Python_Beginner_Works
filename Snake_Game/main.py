@@ -4,6 +4,7 @@ from snake import Snake
 from food import Food
 from scoreboard import Score
 from level import Level
+from start import Start
 screen = Screen()
 screen.colormode(255)
 screen.tracer(0)
@@ -12,7 +13,8 @@ screen.setup(700,700)
 screen.bgcolor("black")
 
 level_diff = Level()
-
+start = Start()
+start.countdown(3)
 snake = Snake()
 food = Food()
 score = Score()
