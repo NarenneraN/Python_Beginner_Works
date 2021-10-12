@@ -1,4 +1,4 @@
-print("Naren's Crossy Road 😂")
+
 from turtle import Turtle,Screen
 from boundary import Boundary
 from vehicle import Vehicle
