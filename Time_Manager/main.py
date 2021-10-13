@@ -1,0 +1,1 @@
+print("Simple time manger!")
