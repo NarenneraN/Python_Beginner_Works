@@ -7,16 +7,18 @@ def add_info():
     web_name=website_entry.get()
     username=username_entry.get()
     password=password_entry.get()
-
-    cnfrm = messagebox.askokcancel(title="Confirmation",message=f"Details Entered :- \nEmail or UserName : {username}\nPassword : {password}\n"
-                                                              f"Website : {web_name}\nIs it ok to save")
-    if cnfrm:
-        with open("my_information.txt", "a") as info_file:
-            info_file.write(f"{web_name} || {username} || {password}\n")
-        website_entry.delete(0, END)
-        username_entry.delete(0, END)
-        password_entry.delete(0, END)
-        website_entry.focus()
+    if len(web_name)==0 or len(username)==0 or len(password)==0:
+        messagebox.showinfo(title="Error!",message="Please don't leave anny fields empty 🙄")
+    else:
+        cnfrm = messagebox.askokcancel(title="Confirmation",message=f"Details Entered :- \nEmail or UserName : {username}\nPassword : {password}\n"
+                                                                  f"Website : {web_name}\nIs it ok to save")
+        if cnfrm:
+            with open("my_information.txt", "a") as info_file:
+                info_file.write(f"{web_name} || {username} || {password}\n")
+            website_entry.delete(0, END)
+            username_entry.delete(0, END)
+            password_entry.delete(0, END)
+            website_entry.focus()
 
 
 
